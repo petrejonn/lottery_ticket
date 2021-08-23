@@ -17,14 +17,14 @@ class SeeResultPage extends StatelessWidget {
             padding: EdgeInsets.only(left: 4.w),
             child: Icon(
               Icons.arrow_back_ios_new,
-              size: 16,
+              size: 16.sp,
             ),
           ),
-          leadingWidth: 24,
+          leadingWidth: 24.sp,
           backgroundColor: Colors.transparent,
           title: Text(
             'See Result',
-            style: TextStyle(fontSize: 15),
+            style: TextStyle(fontSize: 15.sp),
           ),
         ),
         body: Center(
@@ -32,17 +32,16 @@ class SeeResultPage extends StatelessWidget {
               padding: EdgeInsets.all(16.sp),
               child: Container(
                 width: double.infinity,
-                height: MediaQuery.of(context).size.height * 0.6,
                 padding:
                     EdgeInsets.symmetric(horizontal: 16.sp, vertical: 48.sp),
                 decoration: BoxDecoration(
                     color: const Color(0XFFFFFFFF),
-                    borderRadius: BorderRadius.all(Radius.circular(32))),
+                    borderRadius: BorderRadius.all(Radius.circular(20.sp))),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8.0),
+                        padding: EdgeInsets.symmetric(vertical: 8.0.sp),
                         child: TextField(
                           decoration: InputDecoration(
                             fillColor: Colors.grey.shade100,
@@ -52,13 +51,13 @@ class SeeResultPage extends StatelessWidget {
                             labelText: 'Jackpots',
                             suffixIcon: Icon(Icons.expand_more),
                             border: OutlineInputBorder(
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(32))),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.sp))),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8.0),
+                        padding: EdgeInsets.symmetric(vertical: 8.0.sp),
                         child: TextField(
                           decoration: InputDecoration(
                             fillColor: Colors.grey.shade100,
@@ -68,15 +67,15 @@ class SeeResultPage extends StatelessWidget {
                             labelText: DateTime.now().toString(),
                             suffixIcon: Icon(Icons.date_range),
                             border: OutlineInputBorder(
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(32))),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20.sp))),
                           ),
                         ),
                       ),
                       Align(
                         alignment: Alignment.centerLeft,
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 8.0),
+                          padding: EdgeInsets.symmetric(vertical: 8.0.sp),
                           child: Text('Enter Your Number',
                               style: Theme.of(context)
                                   .textTheme
@@ -85,7 +84,7 @@ class SeeResultPage extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 12.0),
+                        padding: EdgeInsets.only(bottom: 12.0.sp),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -98,11 +97,13 @@ class SeeResultPage extends StatelessWidget {
                         ),
                       ),
                       MaterialButton(
+                        minWidth: double.infinity,
                         padding: EdgeInsets.symmetric(
-                            vertical: 1.5.h, horizontal: 24.w),
+                          vertical: 2.h,
+                        ),
                         shape: RoundedRectangleBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(32))),
+                                BorderRadius.all(Radius.circular(20.sp))),
                         color: Theme.of(context).primaryColor,
                         child: Text(
                           'See Result',

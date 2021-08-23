@@ -15,14 +15,14 @@ class ResultPage extends StatelessWidget {
           padding: EdgeInsets.only(left: 4.w),
           child: Icon(
             Icons.arrow_back_ios_new,
-            size: 16,
+            size: 16.sp,
           ),
         ),
-        leadingWidth: 24,
+        leadingWidth: 24.sp,
         backgroundColor: Colors.transparent,
         title: Text(
           'Your Result',
-          style: TextStyle(fontSize: 15),
+          style: TextStyle(fontSize: 15.sp),
         ),
       ),
       body: Center(
@@ -46,7 +46,7 @@ class ResultPage extends StatelessWidget {
       padding: EdgeInsets.all(32.sp),
       decoration: BoxDecoration(
           color: const Color(0XFFFFFFFF),
-          borderRadius: BorderRadius.all(Radius.circular(32))),
+          borderRadius: BorderRadius.all(Radius.circular(20.sp))),
       child: Column(
         children: [
           Text(message,
@@ -58,7 +58,7 @@ class ResultPage extends StatelessWidget {
           Expanded(
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(32)),
+                borderRadius: BorderRadius.all(Radius.circular(20.sp)),
                 image: DecorationImage(
                   image: AssetImage(image),
                 ),

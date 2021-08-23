@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({
@@ -14,37 +15,37 @@ class BottomNavBar extends StatelessWidget {
           clipper: BottomNavArc(),
           child: Container(
             color: Theme.of(context).primaryColor,
-            height: 120,
+            height: 60.sp,
             width: double.infinity,
             child: Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: EdgeInsets.symmetric(
                     horizontal: MediaQuery.of(context).size.width * 0.2,
-                    vertical: 12),
+                    vertical: 6.sp),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      padding: EdgeInsets.all(6),
+                      padding: EdgeInsets.all(6.sp),
                       decoration: BoxDecoration(
                           color: Theme.of(context).backgroundColor,
                           shape: BoxShape.circle),
                       child: Icon(
                         Icons.ac_unit,
                         color: Theme.of(context).primaryColor,
-                        size: 32,
+                        size: 28.sp,
                       ),
                     ),
                     Icon(
                       Icons.roofing_outlined,
                       color: Theme.of(context).backgroundColor,
-                      size: 32,
+                      size: 28.sp,
                     ),
                     Icon(
                       Icons.person_outline,
                       color: Theme.of(context).backgroundColor,
-                      size: 32,
+                      size: 28.sp,
                     )
                   ],
                 ),
@@ -60,8 +61,9 @@ class BottomNavArc extends CustomClipper<Path> {
   Path getClip(Size size) {
     var path = Path();
     path.moveTo(0.0, size.height);
-    path.lineTo(0.0, size.height - 30);
-    path.quadraticBezierTo(size.width / 2, 10.0, size.width, size.height - 30);
+    path.lineTo(0.0, size.height - 18.sp);
+    path.quadraticBezierTo(
+        size.width / 2, -40.0.sp, size.width, size.height - 18.sp);
     path.lineTo(size.width, size.height);
     path.close();
     return path;

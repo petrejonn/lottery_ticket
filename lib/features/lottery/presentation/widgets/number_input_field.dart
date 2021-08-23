@@ -15,7 +15,7 @@ class NumberInputField extends StatelessWidget {
         width: 13.w,
         decoration: BoxDecoration(
             color: Theme.of(context).backgroundColor,
-            borderRadius: BorderRadius.circular(32)),
+            borderRadius: BorderRadius.circular(20.sp)),
         child: Center(
             child: Text(
           value,

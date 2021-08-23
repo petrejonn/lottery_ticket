@@ -22,13 +22,13 @@ class HomePage extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(bottom: 5.h, top: 2.h),
+                  padding: EdgeInsets.only(
+                    bottom: 20.sp,
+                  ),
                   child: Text(
                     'Lottery Ticket',
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline6
-                        ?.copyWith(fontWeight: FontWeight.w800),
+                    style: Theme.of(context).textTheme.headline6?.copyWith(
+                        fontWeight: FontWeight.w900, fontSize: 18.sp),
                   ),
                 ),
                 Expanded(child: LotteryListView()),

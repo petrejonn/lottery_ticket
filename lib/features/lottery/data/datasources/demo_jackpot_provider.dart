@@ -19,7 +19,7 @@ class DemoJackpotProvider {
           time: '08:25:45'),
       JackpotModel(
           id: 'B313',
-          title: 'Africa Connect',
+          title: 'Africa Moni',
           prize: 120000000,
           logoUrl: 'assets/logos/logo3.jpg',
           countryCode: 'GH',

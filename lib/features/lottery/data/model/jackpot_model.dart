@@ -5,7 +5,7 @@ import 'package:lottery_ticket/features/lottery/domain/entities/jackpot.dart';
 class JackpotModel extends Jackpot {
   final String id;
   final String title;
-  final double prize;
+  final int prize;
   final String logoUrl;
   final String countryCode;
   final String time;

@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 class Jackpot extends Equatable {
   final String id;
   final String title;
-  final double prize;
+  final int prize;
   final String logoUrl;
   final String countryCode;
   final String time;

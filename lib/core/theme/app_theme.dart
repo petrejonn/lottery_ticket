@@ -7,7 +7,7 @@ class AppTheme {
         TargetPlatform.android: CupertinoPageTransitionsBuilder(),
       }),
       visualDensity: VisualDensity.adaptivePlatformDensity,
-      primaryColor: Colors.blue.shade800,
+      primaryColor: Color(0XFF4a3ac6),
       backgroundColor: const Color(0xFFFFFFFF),
       appBarTheme: AppBarTheme(
         color: Colors.transparent,
@@ -15,5 +15,6 @@ class AppTheme {
       ),
       textTheme: TextTheme(
           headline6: TextStyle(color: const Color(0XFFFFFFFF)),
+          subtitle1: TextStyle(fontWeight: FontWeight.w600),
           button: TextStyle(color: const Color(0XFFFFFFFF))));
 }

@@ -14,9 +14,10 @@ class LotteryListView extends StatelessWidget {
   Widget build(BuildContext context) {
     BlocProvider.of<JackpotCubit>(context).getJackposts();
     return Container(
-      padding: EdgeInsets.only(left: 6.w, right: 6.w, top: 6.h, bottom: 0),
+      padding:
+          EdgeInsets.only(left: 8.sp, right: 8.sp, top: 28.sp, bottom: 4.sp),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(32)),
+          borderRadius: BorderRadius.vertical(top: Radius.circular(20.sp)),
           color: Theme.of(context).backgroundColor),
       child: BlocBuilder<JackpotCubit, JackpotState>(
         builder: (context, state) {
@@ -34,46 +35,51 @@ class LotteryListView extends StatelessWidget {
                         children: [
                           Image.asset(
                             jackpots[index].logoUrl,
-                            width: 40,
-                            height: 40,
+                            width: 28.sp,
+                            height: 28.sp,
                           ),
                           Expanded(
-                            child: Column(
-                              children: [
-                                Text(
-                                  jackpots[index].title,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .subtitle1
-                                      ?.copyWith(fontWeight: FontWeight.w500),
-                                ),
-                                Text(
-                                  'Jackpot',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1
-                                      ?.copyWith(color: Colors.grey),
-                                ),
-                                Text(
-                                  '\$ ' + jackpots[index].prize.toString(),
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .subtitle1
-                                      ?.copyWith(
-                                          color:
-                                              Theme.of(context).primaryColor),
-                                ),
-                              ],
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 8.sp),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    jackpots[index].title,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .subtitle1
+                                        ?.copyWith(),
+                                  ),
+                                  Text(
+                                    'Jackpots',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText1
+                                        ?.copyWith(color: Colors.grey),
+                                  ),
+                                  Text(
+                                    '\$ ' + jackpots[index].prize.toString(),
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .subtitle1
+                                        ?.copyWith(
+                                            color:
+                                                Theme.of(context).primaryColor),
+                                  ),
+                                ],
+                              ),
                             ),
                             flex: 3,
                           ),
                           Expanded(
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Flag.fromString(
                                   jackpots[index].countryCode,
                                   height: 30.sp,
-                                  width: 30.sp,
+                                  width: 40.sp,
                                 ),
                                 Text(
                                   'Next Draw',
@@ -93,18 +99,20 @@ class LotteryListView extends StatelessWidget {
                             ),
                             flex: 2,
                           ),
-                          Expanded(
+                          Container(
                             child: MaterialButton(
                               shape: RoundedRectangleBorder(
                                   borderRadius:
-                                      BorderRadius.all(Radius.circular(32))),
+                                      BorderRadius.all(Radius.circular(20.sp))),
                               color: Theme.of(context).primaryColor,
                               child: Text(
-                                'Play Now',
+                                'Play now',
                                 style: Theme.of(context)
                                     .textTheme
                                     .button
-                                    ?.copyWith(fontSize: 9.sp),
+                                    ?.copyWith(
+                                        fontSize: 10.sp,
+                                        fontWeight: FontWeight.bold),
                               ),
                               onPressed: () {
                                 Navigator.push(
@@ -116,15 +124,14 @@ class LotteryListView extends StatelessWidget {
                                 );
                               },
                             ),
-                            flex: 2,
                           ),
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8.0),
+                        padding: EdgeInsets.symmetric(vertical: 11.0.sp),
                         child: Container(
                           width: double.infinity,
-                          color: Colors.grey.withOpacity(0.5),
+                          color: Colors.grey.withOpacity(0.7),
                           height: 0.5,
                         ),
                       )

@@ -8,11 +8,10 @@ class NumbersGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-        child: Container(
-      padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 6.h),
+    return Container(
+      padding: EdgeInsets.only(left: 6.w, right: 6.w, top: 6.h),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(32)),
+          borderRadius: BorderRadius.vertical(top: Radius.circular(20.sp)),
           color: Theme.of(context).backgroundColor),
       child: Column(
         children: [
@@ -40,7 +39,7 @@ class NumbersGrid extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.sp),
             child: GridView.builder(
                 shrinkWrap: true,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -60,6 +59,6 @@ class NumbersGrid extends StatelessWidget {
           ),
         ],
       ),
-    ));
+    );
   }
 }

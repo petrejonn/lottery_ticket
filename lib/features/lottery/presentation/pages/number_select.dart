@@ -20,14 +20,14 @@ class NumberSelectPage extends StatelessWidget {
             padding: EdgeInsets.only(left: 4.w),
             child: Icon(
               Icons.arrow_back_ios_new,
-              size: 16,
+              size: 16.sp,
             ),
           ),
-          leadingWidth: 24,
+          leadingWidth: 24.sp,
           backgroundColor: Colors.transparent,
           title: Text(
             'Choose Number',
-            style: TextStyle(fontSize: 15),
+            style: TextStyle(fontSize: 15.sp),
           ),
         ),
         body: Column(
@@ -81,28 +81,33 @@ class NumberSelectPage extends StatelessWidget {
                 ],
               ),
             ),
-            NumbersGrid(),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 3.h),
-              width: double.infinity,
-              color: Theme.of(context).backgroundColor,
-              child: MaterialButton(
-                padding: EdgeInsets.symmetric(vertical: 1.h),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(232))),
-                color: Theme.of(context).primaryColor,
-                child: Text(
-                  'Make a Payment',
-                  style: Theme.of(context).textTheme.button?.copyWith(
-                        fontSize: 13.sp,
-                      ),
+            Expanded(
+              child: NumbersGrid(),
+              flex: 7,
+            ),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 1.h),
+                width: double.infinity,
+                color: Theme.of(context).backgroundColor,
+                child: MaterialButton(
+                  padding: EdgeInsets.symmetric(vertical: 2.h),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20.sp))),
+                  color: Theme.of(context).primaryColor,
+                  child: Text(
+                    'Make a Payment',
+                    style: Theme.of(context).textTheme.button?.copyWith(
+                          fontSize: 13.sp,
+                        ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PaymentPage()),
+                    );
+                  },
                 ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => PaymentPage()),
-                  );
-                },
               ),
             )
           ],
